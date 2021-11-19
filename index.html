@@ -1,0 +1,94 @@
+<!--Mohamed Makouk-->
+<!--Mohamed_Makouk@student.uml.edu-->
+<!--October 2021-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <div class="container-fluid">
+        <h1>Multiplication Table Generator</h1>
+    </div>
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    
+    <style>
+
+        .table-wrap {
+            height: 540px;
+            width: 50%;
+            overflow-y: auto;
+            overflow-x: auto;
+            visibility: hidden;
+        }
+
+        th,td
+        {
+            width: 60px;
+            font-size: 15px;
+        }
+
+        td:nth-child(1) 
+        {
+            background-color: rgb(187, 139, 77) ;
+            color:white;
+        }
+
+        tr:first-child td
+        {
+            background-color: rgb(187, 139, 77) ;
+            color: white;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid"></div>
+    <!--take values from user in form-->
+    <div class="container-fluid">
+        <!--entire page-->
+        <div class="row">
+            <div class="col-sm" id="formWrapper">
+                <form name='myForm' id='myForm'>
+                    <label for="minColumn">Minimum Cloumn Value: </label><br>
+                    <input type="number" id="minColumn" name="minColumn" class="form-control"><br>
+
+                    <label for="maxColumn">Maximum Cloumn Value: </label><br>
+                    <input type="number" id="maxColumn" name="maxColumn" class="form-control"><br>
+
+                    <label for="minRow">Minimum Row Value: </label><br>
+                    <input type="number" id="minRow" name="minRow" class="form-control"><br>
+
+                    <label for="maxRow">Maximum Row Value: </label><br>
+                    <input type="number" id="maxRow" name="maxRow" class="form-control"><br>
+                    <button type="button" class="btn btn-primary" onclick="fillTable()">Submit</button>
+                </form>
+            </div>
+
+            <div class="table-wrap" id="table-wrap">
+                <!--table wrapper-->
+                <table id="multTable" name="multTable" class="table table-bordered table-striped table-responsive">
+                    <td></td>
+                    <th scope=" col">#</th>
+                </table>
+            </div>
+        </div>
+        <span id="errorMsg"></span>
+    </div>
+    <script type="text/javascript" src="js/tableCalc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
